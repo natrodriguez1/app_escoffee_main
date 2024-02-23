@@ -1,0 +1,186 @@
+[
+  {
+    "id": "501",
+    "name": "Receta de Switch de James Hoffmann",
+    "brewing_method_id": "clever_dripper",
+    "brewing_method": "Switch Dripper",
+    "coffee_amount": 15,
+    "water_amount": 250,
+    "water_temp": 95,
+    "grind_size": "Medio-fino",
+    "brew_time": "3min 30s",
+    "short_description": "Receta de James Hoffmann para el Switch Dripper, campeón mundial de baristas y figura reconocida en el mundo del café. [Ver tutorial](https://youtu.be/QjIvN8mlK9Y).",
+    "last_used": "2023-05-01T12:00:00Z",
+    "is_favorite": false,
+    "steps": [
+      {
+        "order": 1,
+        "description": "Colocar el filtro en el Switch Dripper y purgarlo con agua caliente. Moler el café y pesarlo, mas no añadirlo al Switch. Tarar la balanza. Preparar una cuchara.",
+        "time": 0
+      },
+      {
+        "order": 2,
+        "description": "Verter <final_water_amount>ml de agua en el Switch Dripper.",
+        "time": 10
+      },
+      {
+        "order": 3,
+        "description": "Añadir el café al agua y removerlo ligeramente con la cuchara.",
+        "time": 10
+      },
+      {
+        "order": 4,
+        "description": "Permitir que la mezcla repose durante 2 minutos.",
+        "time": 120
+      },
+      {
+        "order": 5,
+        "description": "Agitar suavemente la cafetera o revolver con la cuchara para romper la capa superior.",
+        "time": 10
+      },
+      {
+        "order": 6,
+        "description": "Colocar el Clever Dripper sobre una jarra y dejar que se filtre completamente.",
+        "time": 60
+      }
+    ]
+  },
+  {
+    "id": "502",
+    "name": "Receta de Switch Dripper de European Coffee Trip",
+    "brewing_method_id": "clever_dripper",
+    "brewing_method": "Switch Dripper",
+    "coffee_amount": 20,
+    "water_amount": 300,
+    "water_temp": 95,
+    "grind_size": "Grueso",
+    "brew_time": "5min 20s",
+    "short_description": "Receta del Switch Dripper del canal de YouTube European Coffee Trip. [Tutorial aquí](https://www.youtube.com/watch?v=H4-XTUpX9Mo).",
+    "last_used": "2023-05-01T12:00:00Z",
+    "is_favorite": false,
+    "steps": [
+      {
+        "order": 1,
+        "description": "Insertar el filtro de papel en el Switch y enjuagarlo con agua caliente. Moler el café y colocarlo en la cafetera.",
+        "time": 0
+      },
+      {
+        "order": 2,
+        "description": "Agregar <final_water_amount>ml de agua a la cafetera.",
+        "time": 10
+      },
+      {
+        "order": 3,
+        "description": "Esperar 2 minutos.",
+        "time": 120
+      },
+      {
+        "order": 4,
+        "description": "Romper suavemente la capa superior con una cuchara.",
+        "time": 10
+      },
+      {
+        "order": 5,
+        "description": "Esperar 2 minutos más.",
+        "time": 120
+      },
+      {
+        "order": 6,
+        "description": "Colocar el Switch Dripper sobre una jarra y permitir que el café se filtre completamente.",
+        "time": 60
+      }
+    ]
+  },
+  {
+    "id": "503",
+    "name": "Receta Switch Dripper de Coffee and Water",
+    "brewing_method_id": "clever_dripper",
+    "brewing_method": "Switch Dripper",
+    "coffee_amount": 28,
+    "water_amount": 420,
+    "water_temp": 95,
+    "grind_size": "Medio-grueso",
+    "brew_time": "5min 20s",
+    "short_description": "Receta de Switch Dripper del canal de YouTube Coffee and Water. [Tutorial aquí](https://www.youtube.com/watch?v=gyZ7Zvvl3uk).",
+    "last_used": "2023-05-01T12:00:00Z",
+    "is_favorite": false,
+    "steps": [
+      {
+        "order": 1,
+        "description": "Insertar el filtro de papel en el Switch Dripper y enjuagarlo con agua caliente. Moler el café y verterlo en la cafetera.",
+        "time": 0
+      },
+      {
+        "order": 2,
+        "description": "Agregar <final_water_amount>ml de agua al Switch Dripper.",
+        "time": 10
+      },
+      {
+        "order": 3,
+        "description": "Dejar reposar el café durante 50 segundos.",
+        "time": 50
+      },
+      {
+        "order": 4,
+        "description": "Romper la costra superior con una cuchara, mezclando tres veces.",
+        "time": 10
+      },
+      {
+        "order": 5,
+        "description": "Dejar reposar el café durante otros 80 segundos.",
+        "time": 80
+      },
+      {
+        "order": 6,
+        "description": "Colocar el Switch Dripper sobre una jarra y dejar que el café se filtre completamente.",
+        "time": 60
+      }
+    ]
+  },
+  {
+    "id": "504",
+    "name": "Receta de James Hoffmann de Iced Switch Dripper",
+    "brewing_method_id": "clever_dripper",
+    "brewing_method": "Switch Dripper",
+    "coffee_amount": 37.5,
+    "water_amount": 500,
+    "water_temp": 95,
+    "grind_size": "fino",
+    "brew_time": "6min 35s",
+    "short_description": "Receta de café helado por inmersión mejorada de James Hoffmann. [Tutorial aquí](https://www.youtube.com/watch?v=8uGGeV8A-BM). Opcional: añadir unas gotas de solución salina al final para atenuar el amargor. Nota: moler más fino que para pour over, pero no tan fino como para espresso.",
+    "last_used": "2023-05-01T12:00:00Z",
+    "is_favorite": false,
+    "steps": [
+      {
+        "order": 1,
+        "description": "Colocar el filtro de papel en el Switch Dripper y enjuagarlo con agua. Moler el café y pesarlo, mas no añadirlo al Clever Dripper. Tarar la balanza. Preparar una cuchara. Necesitará (0.34 x <final_water_amount>)g de hielo, pero mantenerlo en el congelador por ahora.",
+        "time": 0
+      },
+      {
+        "order": 2,
+        "description": "Añadir (0.66 x <final_water_amount>)ml de agua al Switch Dripper.",
+        "time": 10
+      },
+      {
+        "order": 3,
+        "description": "Agregar el café al agua y mezclar bien con una cuchara para asegurar que todo el café esté mojado.",
+        "time": 10
+      },
+      {
+        "order": 4,
+        "description": "Dejar reposar el café. Antes de que se acabe el tiempo de reposo, añadir (0.34 x <final_water_amount>)g de hielo a la jarra.",
+        "time": 300
+      },
+      {
+        "order": 5,
+        "description": "Colocar el Switch Dripper sobre la jarra y esperar.",
+        "time": 60
+      },
+      {
+        "order": 6,
+        "description": "Agitar la jarra o mezclar con una cuchara para disolver el hielo restante. Opcional: añada unas gotas de solución salina para atenuar el amargor.",
+        "time": 15
+      }
+    ]
+  }
+]

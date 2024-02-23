@@ -1,0 +1,105 @@
+[
+    {
+      "id": "701",
+      "name": "Receta de pour-over de inmersion con Wilfa Svart",
+      "brewing_method_id": "wilfa_svart",
+      "brewing_method": "Wilfa Svart Pour Over",
+      "coffee_amount": 18,
+      "water_amount": 300,
+      "water_temp": 95,
+      "grind_size": "Medium-coarse",
+      "brew_time": "3min 30s",
+      "short_description": "Esta es una receta que utiliza Wilfa Dripper.",
+      "last_used": "2023-05-01T12:00:00Z",
+      "is_favorite": false,
+      "steps": [
+        {
+          "order": 1,
+          "description": "Purgar el filtro de papel y dripper con agua caliente. Moler el café. Verter el café molido y tarar la balanza. Cerrar el restrictor de flujo.",
+          "time": 0
+        },
+        {
+          "order": 2,
+          "description": "Verter <final_water_amount>ml de agua",
+          "time": 15
+        },
+        {
+          "order": 3,
+          "description": "Agitar un poco el dripper.",
+          "time": 5
+        },
+        {
+          "order": 4,
+          "description": "Dejar reposar el café.",
+          "time": 130
+        },
+        {
+          "order": 5,
+          "description": "Romper suavemente la costra de café con una cuchara.",
+          "time": 10
+        },
+        {
+          "order": 6,
+          "description": "Esperar.",
+          "time": 20
+        },      
+        {
+          "order": 7,
+          "description": "Abrir completamente el paso de flujo y esperar.",
+          "time": 30
+        }
+      ]
+    },
+    {
+      "id": "702",
+      "name": "Receta de Wilfa Svart Pour Over de Best Coffee",
+      "brewing_method_id": "wilfa_svart",
+      "brewing_method": "Wilfa Svart Pour Over",
+      "coffee_amount": 18,
+      "water_amount": 300,
+      "water_temp": 95,
+      "grind_size": "Coarse",
+      "brew_time": "3min 0s",
+      "short_description": "Otro método de filtrado con Wilfa Svart Pour Over es, lo has adivinado, pour over! Esta es una receta de [Best Coffee](https://www.bestcoffee.guide/blogs/product-reviews/wilfa-pour-over-smart-dripper-review).",
+      "last_used": "2023-05-01T12:00:00Z",
+      "is_favorite": false,
+      "steps": [
+        {
+          "order": 1,
+          "description": "Purgar el filtro y dripper con agua caliente. Moler el café. Verter el café molido y tarar la balanza. Cerrar la restricción de flujo.",
+          "time": 0
+        },
+        {
+          "order": 2,
+          "description": "Humedecer con (2.2 x <final_coffee_amount>)ml de agua.",
+          "time": 10
+        },
+        {
+          "order": 3,
+          "description": "Permitir que se haga la pre-infusión.",
+          "time": 20
+        },
+        {
+          "order": 4,
+          "description": "Abrir el paso del flujo hasta la mitad.",
+          "time": 5
+        },
+        {
+        "order": 5,
+        "description": "Añadir agua hasta alcanzar (0.6 x <final_water_amount>)ml",
+        "time": 30
+      },
+      {
+        "order": 6,
+        "description": "Continuar vertiendo agua hasta alcanzar <final_water_amount>ml",
+        "time": 30
+      },
+      {
+        "order": 7,
+        "description": "Esperar y cerrar el paso de flujo.",
+        "time": 115
+      }
+    ]
+    }
+  ]
+  

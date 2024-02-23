@@ -1,0 +1,81 @@
+name: app_escoffee_main
+description: Brew delicious coffee at home with Escoffee.Coffee
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  flutter_linkify: ^5.0.2
+  intl: ^0.17.0
+  url_launcher: ^6.0.12
+  provider: ^6.0.5
+  shared_preferences: ^2.1.0
+  ionicons: ^0.2.2
+  wakelock_plus: ^1.1.2
+  advanced_in_app_review: ^1.2.1
+  package_info_plus: ^4.1.0
+  flutter_markdown: ^0.6.15
+  cupertino_icons: ^1.0.0
+  just_audio: ^0.9.34
+  auto_route: ^7.7.1
+  share_plus: ^7.1.0
+  universal_html: ^2.2.3
+  flutter_native_splash: ^2.3.1
+  quick_actions: ^1.0.5
+  introduction_screen: ^3.1.11
+  coffeico: ^0.0.1
+  in_app_purchase: ^3.1.11
+
+dependency_overrides:
+  flutter_keyboard_visibility:
+    git:
+      url: https://github.com/MisterJimson/flutter_keyboard_visibility.git
+      ref: b5e7b0de4fa9eb6a6c076f1120e5f92a77b7679d # https://github.com/MisterJimson/flutter_keyboard_visibility/commit/b5e7b0de4fa9eb6a6c076f1120e5f92a77b7679d
+      path: flutter_keyboard_visibility
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  auto_route_generator: ^7.2.0
+  build_runner: ^2.2.0
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/splash.png
+
+flutter:
+  uses-material-design: true
+  fonts:
+   - family:  CoffeeTimerIcons
+     fonts:
+     - asset: fonts/CoffeeTimerIcons.ttf
+   - family:  Lato
+     fonts:
+     - asset: fonts/Lato-Regular.ttf
+     - asset: fonts/Lato-Bold.ttf
+       weight: 700
+
+  assets:
+    - assets/data/brewing_methods.json
+    - assets/data/recipes_v60.json
+    - assets/data/recipes_aeropress.json
+    - assets/data/recipes_chemex.json
+    - assets/data/recipes_frenchpress.json
+    - assets/data/recipes_clever.json
+    - assets/data/recipes_kalita.json
+    - assets/data/recipes_wilfa.json
+    - assets/data/recipes_origami.json
+    - assets/data/coffee_facts.json
+    - assets/CONTRIBUTORS.md
+    - assets/audio/next.mp3
+    - assets/onboarding/android/
+    - assets/onboarding/ios/
+    - assets/onboarding/gifs/
+    - assets/logoapp.png

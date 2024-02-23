@@ -1,0 +1,186 @@
+[
+    {
+      "id": "601",
+      "name": "Receta de Kalita Wave de Scott Rao",
+      "brewing_method_id": "kalita_wave",
+      "brewing_method": "Kalita Wave",
+      "coffee_amount": 20,
+      "water_amount": 340,
+      "water_temp": 95,
+      "grind_size": "Medium fine",
+      "brew_time": "4min 20s",
+      "short_description": "Receta de Kalita Wave de Scott Rao. [Mira el tutorial](https://www.youtube.com/watch?v=BjsGf3R9mc0).",
+      "last_used": "2023-05-01T12:00:00Z",
+      "is_favorite": false,
+      "steps": [
+        {
+          "order": 1,
+          "description": "Moler el café, purgar el filtro de papel con agua caliente y colocarlo en el Kalita Wave. Vertir el café molido.",
+          "time": 0
+        },
+        {
+          "order": 3,
+          "description": "Humedecer con (3 x <final_coffee_amount>)ml de agua.",
+          "time": 10
+        },
+        {
+          "order": 4,
+          "description": "Agitar el filtro, utilizar una cuchara, de ser necesario.",
+          "time": 10
+        },
+        {
+          "order": 5,
+          "description": "Permitir que se produzca la pre-infusión.",
+          "time": 25
+        },
+        {
+          "order": 6,
+          "description": "Vertir hasta (0.6 x <final_water_amount>)ml.",
+          "time": 30
+        },      
+        {
+          "order": 7,
+          "description": "Esperar a que aproximadamente la mitad del líquido se filtre.",
+          "time": 40
+        },
+        {
+          "order": 8,
+          "description": "Colocar agua hasta <final_water_amount>ml.",
+          "time": 10
+        },
+        {
+          "order": 9,
+          "description": "Agitar el filtro suavemente y esperar.",
+          "time": 135
+        }
+      ]
+    },
+    {
+      "id": "602",
+      "name": "Receta de Kalita Wave de James McCarthy",
+      "brewing_method_id": "kalita_wave",
+      "brewing_method": "Kalita Wave",
+      "coffee_amount": 24,
+      "water_amount": 380,
+      "water_temp": 96,
+      "grind_size": "Coarse",
+      "brew_time": "3min 30s",
+      "short_description": "Receta de James McCarthy, ganador del Campeonato del Mundo de Filtrados en 2013 con Kalita Wave. Más detalles [aquí](https://sprudge.com/meet-the-worlds-best-brewer-james-mccarthy-brewers-cup-champ-38672.html).",
+      "last_used": "2023-05-01T12:00:00Z",
+      "is_favorite": false,
+      "steps": [
+        {
+          "order": 1,
+          "description": "Moler y seleccionar (opcional) el café. Purgar el filtro, colocar café en el Kalita y agitar para nivelarlo.",
+          "time": 0
+        },
+        {
+          "order": 2,
+          "description": "Humedecer con (2 x <final_coffee_amount>)ml de agua.",
+          "time": 15
+        },
+        {
+          "order": 3,
+          "description": "Permitir que se produzca la pre-infusión.",
+          "time": 30
+        },
+        {
+          "order": 4,
+          "description": "Vertir por partes hasta (0.5 x <final_water_amount>)ml de agua, manteniendo una columna constante encima del café.",
+          "time": 30
+        },
+        {
+        "order": 5,
+        "description": "Vertir por partes hasta <final_water_amount>ml, si es posible, usando una tetera de flujo restringido.",
+        "time": 30
+      },
+      {
+        "order": 6,
+        "description": "Esperar.",
+        "time": 75
+      }
+    ]
+    },
+    {
+      "id": "603",
+      "name": "Receta de Kalita Wave de George Howell",
+      "brewing_method_id": "kalita_wave",
+      "brewing_method": "Kalita Wave",
+      "coffee_amount": 25,
+      "water_amount": 390,
+      "water_temp": 96,
+      "grind_size": "Medium",
+      "brew_time": "3min 30s",
+      "short_description": "Una receta inusual de [George Howell Coffee](https://georgehowellcoffee.com/pages/brew-guide-kalita-185/).",
+      "last_used": "2023-05-01T12:00:00Z",
+      "is_favorite": false,
+      "steps": [
+        {
+          "order": 1,
+          "description": "Purgar el filtro de papel hasta que el dripper se sienta caliente. Pesar y moler el café. Vertirlo en el Kalita Wave y agitar el dripper para nivelarlo.",
+          "time": 0
+        },
+        {
+          "order": 2,
+          "description": "Vertir hasta (0.16 x <final_water_amount>)ml de agua.",
+          "time": 15
+        },
+        {
+          "order": 3,
+          "description": "Esperar.",
+          "time": 15
+        },
+        {
+          "order": 4,
+          "description": "Vertir hasta (0.33 x <final_water_amount>)ml de agua.",
+          "time": 15
+        },
+        {
+          "order": 5,
+          "description": "Esperar.",
+          "time": 15
+        },
+        {
+          "order": 6,
+          "description": "Vertir hasta (0.5 x <final_water_amount>)ml de agua.",
+          "time": 15
+        },
+        {
+          "order": 7,
+          "description": "Esperar.",
+          "time": 15
+        },
+        {
+          "order": 8,
+          "description": "Vertir hasta (0.66 x <final_water_amount>)ml de agua.",
+          "time": 15
+        },
+        {
+          "order": 9,
+          "description": "Esperar.",
+          "time": 15
+        },
+        {
+          "order": 10,
+          "description": "Vertir hasta (0.83 x <final_water_amount>)ml de agua.",
+          "time": 15
+        },
+        {
+          "order": 11,
+          "description": "Esperar.",
+          "time": 15
+        },
+        {
+          "order": 12,
+          "description": "Vertir hasta <final_water_amount>ml de agua.",
+          "time": 15
+        },
+        {
+          "order": 13,
+          "description": "Esperar.",
+          "time": 45
+        }
+    ]
+    }
+  ]
+  

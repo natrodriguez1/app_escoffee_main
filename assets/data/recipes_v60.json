@@ -1,0 +1,297 @@
+[
+  {
+    "id": "101",
+    "name": "Receta de V60 de James Hoffmann",
+    "brewing_method_id": "hario_v60",
+    "brewing_method": "V60",
+    "coffee_amount": 30,
+    "water_amount": 500,
+    "water_temp": 95,
+    "grind_size": "Medio fino",
+    "brew_time": "3min 30s",
+    "short_description": "Receta de James Hoffmann para V60, fácil de seguir. [Ver vídeo tutorial](https://www.youtube.com/watch?v=AI4ynXzkSQo).",
+    "last_used": "2023-05-01T12:00:00Z",
+    "is_favorite": false,
+    "steps": [
+      {
+        "order": 1,
+        "description": "Enjuagar el filtro y precalentar el V60. Añadir el café molido y crear un pozo en el centro.",
+        "time": 0
+      },
+      {
+        "order": 2,
+        "description": "Prehumedezcer con (2 x <final_coffee_amount>)ml de agua.",
+        "time": 10
+      },
+      {
+        "order": 3,
+        "description": "Agitar la cafetera para homogeneizar la mezcla, mezclar con una cuchara si es necesario.",
+        "time": 10
+      },
+      {
+        "order": 4,
+        "description": "Dejar que se produzca una pre-infusión.",
+        "time": 25
+      },
+      {
+        "order": 5,
+        "description": "Realizar el primer vertido hasta (0.6 x <final_water_amount>)ml en 30 segundos.",
+        "time": 30
+      },
+      {
+        "order": 6,
+        "description": "Completar suavemente el segundo vertido hasta <final_water_amount>ml en 30 segundos.",
+        "time": 30
+      },
+      {
+        "order": 7,
+        "description": "Remover en sentido horario y anti-horario, para despegar el café molido de los lados del cono.",
+        "time": 10
+      },
+      {
+        "order": 8,
+        "description": "Agitar suavemente el V60 para aplanar el lecho de café y lograr una extracción uniforme.",
+        "time": 10
+      },
+      {
+        "order": 9,
+        "description": "Finalizar el filtrado en 3 minutos y 30 segundos.",
+        "time": 85
+      }
+    ]
+  },
+  {
+    "id": "102",
+    "name": "Receta clásica V60 de Scott Rao",
+    "brewing_method_id": "hario_v60",
+    "brewing_method": "V60",
+    "coffee_amount": 22,
+    "water_amount": 360,
+    "water_temp": 95,
+    "grind_size": "Medio fino",
+    "brew_time": "3min 0s",
+    "short_description": "La receta V60 de Scott Rao enfatiza en una extracción uniforme. Scott Rao recomienda usar una V60 de plástico. [Recomendaciones aquí](https://www.youtube.com/watch?v=c0Qe_ASxfNM).",
+    "last_used": "2023-05-01T12:00:00Z",
+    "is_favorite": false,
+    "steps": [
+      {
+        "order": 1,
+        "description": "Enjuagar el filtro y precalentar el V60. Añadir el café molido y nivelar la superficie.",
+        "time": 0
+      },
+      {
+        "order": 2,
+        "description": "Prehumedezcer con (3 x <final_coffee_amount>)ml de agua.",
+        "time": 15
+      },
+      {
+        "order": 3,
+        "description": "Incorporar suavemente para humedecer todo el café molido.",
+        "time": 10
+      },
+      {
+        "order": 4,
+        "description": "Deje que se produzca una pre-infusión.",
+        "time": 20
+      },
+      {
+        "order": 5,
+        "description": "Iniciar el vertido principal hasta <final_water_amount>ml a los 45 segundos.",
+        "time": 50
+      },
+      {
+        "order": 6,
+        "description": "Mezclar suavemente para evitar que el café se adhiera a los lados.",
+        "time": 25
+      },
+      {
+        "order": 7,
+        "description": "Agitar el V60 para aplanar el lecho de café y lograr una infusión uniforme.",
+        "time": 10
+      },
+      {
+        "order": 8,
+        "description": "Completar el drenaje en 3 minutos.",
+        "time": 50
+      }
+    ]
+  },
+  {
+    "id": "103",
+    "name": "Lance Hedrick's ultimate flash brew",
+    "brewing_method_id": "hario_v60",
+    "brewing_method": "V60",
+    "coffee_amount": 20,
+    "water_amount": 240,
+    "water_temp": 93,
+    "grind_size": "Medio fino",
+    "brew_time": "3min 25s",
+    "short_description": "Una receta de café helado con alta extracción y bajo amargor, destacando las cualidades del grano. [Ver vídeo tutorial](https://www.youtube.com/watch?v=qwvnQcojq9Q&).",
+    "last_used": "2023-05-01T12:00:00Z",
+    "is_favorite": false,
+    "steps": [
+      {
+        "order": 1,
+        "description": "Enjuagar el filtro y precalientar el V60. Añadir el café molido y nivelarlo.",
+        "time": 0
+      },
+      {
+        "order": 2,
+        "description": "Realizar el bloom con (0.25 x <final_water_amount>)ml de agua.",
+        "time": 60
+      },
+      {
+        "order": 3,
+        "description": "Verter (0.375 x <final_water_amount>)ml de agua.",
+        "time": 45
+      },
+      {
+        "order": 4,
+        "description": "Agregar otros (0.375 x <final_water_amount>)ml de agua y agite suavemente. Esperar hasta que termine el drenaje.",
+        "time": 45
+      },
+      {
+        "order": 5,
+        "description": "Añadir (0.25 x <final_water_amount>)g de hielo y mezclar hasta enfriar a 5-10°C.",
+        "time": 30
+      },
+      {
+        "order": 6,
+        "description": "Servir sobre cubos de hielo frescos.",
+        "time": 25
+      }
+    ]
+  },
+  {
+    "id": "104",
+    "name": "James Hoffmann receta helada de V60",
+    "brewing_method_id": "hario_v60",
+    "brewing_method": "V60",
+    "coffee_amount": 32.5,
+    "water_amount": 500,
+    "water_temp": 95,
+    "grind_size": "Medio fino",
+    "brew_time": "2min 55s",
+    "short_description": "Versión de James Hoffmann del café helado V60. [Ver el vídeo tutorial](https://www.youtube.com/watch?v=PApBycDrPo0).",
+    "last_used": "2023-05-01T12:00:00Z",
+    "is_favorite": false,
+    "steps": [
+      {
+        "order": 1,
+        "description": "Enjuagar el filtro sin calentar la jarra. Añadir el café molido. Colocar (0.4 x <final_water_amount>)g de hielo en la jarra y poner a cero la balanza.",
+        "time": 0
+      },
+      {
+        "order": 2,
+        "description": "Realizar el bloom con (3 x <final_coffee_amount>)ml de agua.",
+        "time": 10
+      },
+      {
+        "order": 3,
+        "description": "Mezclar suavemente.",
+        "time": 10
+      },
+      {
+        "order": 4,
+        "description": "Dejar que se produzca la pre-infusión.",
+        "time": 25
+      },
+      {
+        "order": 5,
+        "description": "Verter lentamente hasta (0.6 x <final_water_amount>)ml de agua.",
+        "time": 105
+      },
+      {
+        "order": 6,
+        "description": "Mezclar una vez en ambas direcciones.",
+        "time": 10
+      },      
+      {
+        "order": 7,
+        "description": "Agitar la jarra para derretir el hielo y servir sobre hielo fresco.",
+        "time": 15
+      }
+    ]
+  },
+  {
+    "id": "105",
+    "name": "James Hoffmann V60 - Receta de una taza",
+    "brewing_method_id": "hario_v60",
+    "brewing_method": "V60",
+    "coffee_amount": 15,
+    "water_amount": 250,
+    "water_temp": 95,
+    "grind_size": "Medio fino",
+    "brew_time": "3min 0s",
+    "short_description": "Receta V60 de James Hoffmann para una taza. [Ver el vídeo tutorial](https://www.youtube.com/watch?v=1oB1oDrDkHM).",
+    "last_used": "2023-05-01T12:00:00Z",
+    "is_favorite": false,
+    "steps": [
+      {
+        "order": 1,
+        "description": "Enjuagar el filtro y precalentar el V60. Añadir el café molido.",
+        "time": 0
+      },
+      {
+        "order": 2,
+        "description": "Prehumedecer con (0.2 x <final_water_amount>)ml de agua.",
+        "time": 10
+      },
+      {
+        "order": 3,
+        "description": "Agitar suavemente el V60.",
+        "time": 5
+      },
+      {
+        "order": 4,
+        "description": "Deje que se produzca la pre-infusión.",
+        "time": 30
+      },
+      {
+        "order": 5,
+        "description": "Verter hasta (0.4 x <final_water_amount>)ml de agua en total.",
+        "time": 15
+      },
+      {
+        "order": 6,
+        "description": "Esperar.",
+        "time": 10
+      },      
+      {
+        "order": 7,
+        "description": "Verter hasta (0.6 x <final_water_amount>)ml de agua en total.",
+        "time": 10
+      },
+      {
+        "order": 8,
+        "description": "Esperar.",
+        "time": 10
+      },
+      {
+        "order": 9,
+        "description": "Verter hasta (0.8 x <final_water_amount>)ml de agua en total.",
+        "time": 10
+      },
+      {
+        "order": 10,
+        "description": "Esperar.",
+        "time": 10
+      },
+      {
+        "order": 11,
+        "description": "Verter hasta <final_water_amount>ml de agua en total.",
+        "time": 10
+      },
+      {
+        "order": 12,
+        "description": "Realizar un remolino suave.",
+        "time": 5
+      },
+      {
+        "order": 13,
+        "description": "Esperar al drenaje completo.",
+        "time": 55
+      }
+    ]
+  }
+]
