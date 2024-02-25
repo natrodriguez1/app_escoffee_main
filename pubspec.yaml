@@ -79,3 +79,10 @@ flutter:
     - assets/onboarding/ios/
     - assets/onboarding/gifs/
     - assets/logoapp.png
+    - assets/visuals/hario.png
+    - assets/visuals/aeropress.png
+    - assets/visuals/chemex.png
+    - assets/visuals/prensa.png
+    - assets/visuals/switch.png
+    - assets/visuals/origami.png
+    - assets/visuals/banner.png

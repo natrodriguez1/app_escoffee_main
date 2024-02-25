@@ -10,8 +10,10 @@ import 'about_screen.dart';
 import 'package:auto_route/auto_route.dart';
 import '../app_router.gr.dart';
 import "package:universal_html/html.dart" as html;
-import '../utils/icon_utils.dart';
 import '../purchase_manager.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../utils/method_utils.dart';
+
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {
@@ -27,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
     if (kIsWeb) {
-      html.document.title = 'Escoffee App';
+      html.document.title = 'EScoffee App';
     }
     // Initialize the purchase manager and set up the callback
     PurchaseManager().initialize();
@@ -71,6 +73,36 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       html.document.title = 'Escoffee App';
     }
   }
+  List<Container> menuItem (List<BrewingMethod> methods){
+    List<Container> lista =  <Container>[];
+    for(BrewingMethod method in methods){
+      lista.add(Container(
+                          decoration: BoxDecoration(
+                                      color: const Color.fromRGBO(157, 17, 43, 1),
+                                      borderRadius: BorderRadius.circular(17.0),
+                                    ),
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                                          onTap: () {
+                                          context.router.push(RecipeListRoute(
+                                              brewingMethodId: method.id));
+                                        },
+                                        highlightColor: const Color.fromARGB(255, 234, 75, 94),
+                                        borderRadius: BorderRadius.circular(17),
+                                        child: Column(
+                                          children: 
+                                          [Padding(padding: const EdgeInsets.all(20),
+                                                    child: getImageByBrewingMethod(method.id, 100)), Text(method.name)], 
+                                          )
+                                        
+                                      )
+                          )
+      )
+                        ); //add
+    }
+    return lista;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -89,59 +121,48 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           Recipe? mostRecentRecipe = snapshot.data;
 
           return Column(
-            children: [
-              if (mostRecentRecipe != null)
-                ListTile(
-                  leading:
-                      getIconByBrewingMethod(mostRecentRecipe.brewingMethodId),
-                  title: Text(
-                      'Receta usada recientemente: ${mostRecentRecipe.name}'),
-                  onTap: () {
-                    context.router.push(RecipeDetailRoute(
-                        brewingMethodId: mostRecentRecipe.brewingMethodId,
-                        recipeId: mostRecentRecipe.id));
-                  },
-                ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: brewingMethods.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return ListTile(
-                      leading: getIconByBrewingMethod(brewingMethods[index]
-                          .id), // Use the brewing method id from the list
-                      title: Text(brewingMethods[index].name),
-                      onTap: () {
-                        context.router.push(RecipeListRoute(
-                            brewingMethodId: brewingMethods[index].id));
-                      },
-                    );
-                  },
-                ),
+            children:[
+              Padding(padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
+                child: InkWell(
+                  onTap: () => _launchURL('https://escoffee.com/shop/'),
+                  child: Image.asset("assets/visuals/banner.png", fit: BoxFit.cover)
+                )
               ),
+              Expanded(child: GridView(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10,  crossAxisSpacing: 10),
+                                padding:  const EdgeInsets.all(15),
+                                children: menuItem(brewingMethods))),
               Padding(
-                padding: const EdgeInsets.all(30.0),
+                padding: const EdgeInsets.only(bottom: 35),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white, // Cambia el color a tu preferencia
+                    backgroundColor: const Color.fromARGB(255, 255, 255, 255), // Cambia el color a tu preferencia
                   ),
-                  child: const Text('Consejos para preparar café'),
+                  child: const Text('Educare: tips para preparar tu café'),
                   onPressed: () {
                     context.router.push(const CoffeeTipsRoute());
                   },
                 ),
-              ),
-            ],
+              ),]
           );
         },
       ),
     );
   }
 
+  void _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url, forceSafariVC: false, forceWebView: false);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   PreferredSizeWidget buildPlatformSpecificAppBar() {
     if (Theme.of(context).platform == TargetPlatform.iOS) {
       return CupertinoNavigationBar(
-        middle: const Text('EsCoffee',
-            style: TextStyle(fontFamily: kIsWeb ? 'Lato' : null)),
+        leading: Padding(padding: const EdgeInsets.fromLTRB(16, 6, 7, 12),
+                      child: Image.asset('assets/logoapp.png', height: 300)),
+        backgroundColor: const Color.fromARGB(255, 97, 8, 25),
         trailing: IconButton(
           icon: const Icon(Icons.info),
           onPressed: () {
@@ -151,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     } else {
       return AppBar(
-        title: Image.asset('assets/logoapp.png', fit: BoxFit.contain),
+        title: Image.asset('assets/logoapp.png'),
         actions: [
           IconButton(
             icon: const Icon(Icons.info),

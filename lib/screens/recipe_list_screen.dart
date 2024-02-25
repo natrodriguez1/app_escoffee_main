@@ -8,6 +8,8 @@ import '../app_router.gr.dart';
 import 'package:flutter/foundation.dart';
 import "package:universal_html/html.dart" as html;
 import '../utils/icon_utils.dart';
+import '../utils/method_utils.dart';
+
 
 @RoutePage()
 class RecipeListScreen extends StatefulWidget {
@@ -98,7 +100,8 @@ class _RecipeListScreenState extends State<RecipeListScreen>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [
+        children:
+        [
           FutureBuilder<List<Recipe>>(
             future: allRecipes,
             builder: (context, snapshot) {
@@ -129,32 +132,40 @@ class _RecipeListScreenState extends State<RecipeListScreen>
   }
 
   Widget _buildRecipeListView(List<Recipe> recipes) {
-    return ListView.builder(
-      itemCount: recipes.length,
-      itemBuilder: (BuildContext context, int index) {
-        return ListTile(
-          title: Text(recipes[index].name),
-          onTap: () {
-            final recipeProvider =
-                Provider.of<RecipeProvider>(context, listen: false);
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.stretch,
+    children: [
+      Padding(padding: const EdgeInsets.fromLTRB(15, 30, 15, 15),
+        child: getImageByBrewingMethod(widget.brewingMethodId, 200)),
+      Expanded(
+        child: ListView.builder(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          itemCount: recipes.length,
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+              title: Text(recipes[index].name),
+              onTap: () {
+                final recipeProvider =
+                    Provider.of<RecipeProvider>(context, listen: false);
 
-            recipeProvider.updateLastUsed(recipes[index].id);
+                recipeProvider.updateLastUsed(recipes[index].id);
 
-            context.router.push(RecipeDetailRoute(
-                brewingMethodId: recipes[index].brewingMethodId,
-                recipeId: recipes[index].id));
+                context.router.push(RecipeDetailRoute(
+                    brewingMethodId: recipes[index].brewingMethodId,
+                    recipeId: recipes[index].id));
+              },
+              trailing: FavoriteButton(
+                recipeId: recipes[index].id,
+                onToggleFavorite: (bool isFavorite) {
+                  Provider.of<RecipeProvider>(context, listen: false)
+                      .toggleFavorite(recipes[index].id);
+                },
+              ),
+            );
           },
-          trailing: FavoriteButton(
-            recipeId: recipes[index]
-                .id, // Use recipes[index].id to access the id of the current recipe
-            onToggleFavorite: (bool isFavorite) {
-              Provider.of<RecipeProvider>(context, listen: false)
-                  .toggleFavorite(recipes[index]
-                      .id); // Use recipes[index].id to access the id of the current recipe
-            },
-          ),
-        );
-      },
-    );
-  }
+        ),
+      ),
+    ],
+  );
+}
 }
