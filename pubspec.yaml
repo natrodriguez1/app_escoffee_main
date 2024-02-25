@@ -61,6 +61,18 @@ flutter:
      - asset: fonts/Lato-Regular.ttf
      - asset: fonts/Lato-Bold.ttf
        weight: 700
+   - family: Poppins
+     fonts:
+     - asset: fonts/Poppins-SemiBold.ttf
+     - asset: fonts/Poppins-Regular.ttf
+     - asset: fonts/Poppins-Medium.ttf
+     - asset: fonts/Poppins-Light.ttf
+     - asset: fonts/Poppins-ExtraLight.ttf
+     - asset: fonts/Poppins-ExtraBold.ttf
+     - asset: fonts/Poppins-Bold.ttf
+       weight: 700
+     - asset: fonts/Poppins-Black.ttf
+       weight: 600
 
   assets:
     - assets/data/brewing_methods.json

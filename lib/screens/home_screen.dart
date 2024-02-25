@@ -77,27 +77,27 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     List<Container> lista =  <Container>[];
     for(BrewingMethod method in methods){
       lista.add(Container(
-                          decoration: BoxDecoration(
-                                      color: const Color.fromRGBO(157, 17, 43, 1),
-                                      borderRadius: BorderRadius.circular(17.0),
-                                    ),
-                          child: Material(
-                            color: Colors.transparent,
-                            child: InkWell(
-                                          onTap: () {
-                                          context.router.push(RecipeListRoute(
-                                              brewingMethodId: method.id));
-                                        },
-                                        highlightColor: const Color.fromARGB(255, 234, 75, 94),
-                                        borderRadius: BorderRadius.circular(17),
-                                        child: Column(
-                                          children: 
-                                          [Padding(padding: const EdgeInsets.all(20),
-                                                    child: getImageByBrewingMethod(method.id, 100)), Text(method.name)], 
-                                          )
-                                        
-                                      )
-                          )
+              decoration: BoxDecoration(
+                    color: const Color.fromRGBO(157, 17, 43, 1),
+                    borderRadius: BorderRadius.circular(17.0),
+                  ),
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                      onTap: () {
+                      context.router.push(RecipeListRoute(
+                          brewingMethodId: method.id));
+                    },
+                    highlightColor: const Color.fromARGB(255, 234, 75, 94),
+                    borderRadius: BorderRadius.circular(17),
+                    child: Column(
+                      children: 
+                      [Padding(padding: const EdgeInsets.all(20),
+                                child: getImageByBrewingMethod(method.id, 100)), Text(method.name, style: const TextStyle(fontWeight: FontWeight.w900),)], 
+                      )
+                            
+                )
+              )
       )
                         ); //add
     }

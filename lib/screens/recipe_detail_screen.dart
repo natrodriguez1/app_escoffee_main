@@ -98,18 +98,18 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
     return false;
   }
 
-  void _onShare(BuildContext context) async {
-    final RenderBox box = context.findRenderObject() as RenderBox;
-    final Rect rect = box.localToGlobal(Offset.zero) & box.size;
-    final String textToShare =
-        'https://app.timer.coffee/recipes/${widget.brewingMethodId}/${widget.recipeId}';
+  // void _onShare(BuildContext context) async {
+  //   final RenderBox box = context.findRenderObject() as RenderBox;
+  //   final Rect rect = box.localToGlobal(Offset.zero) & box.size;
+  //   final String textToShare =
+  //       'https://app.timer.coffee/recipes/${widget.brewingMethodId}/${widget.recipeId}';
 
-    await Share.share(
-      textToShare,
-      subject: 'Mira esta receta: ${_updatedRecipe!.name}',
-      sharePositionOrigin: rect,
-    );
-  }
+  //   await Share.share(
+  //     textToShare,
+  //     subject: 'Mira esta receta: ${_updatedRecipe!.name}',
+  //     sharePositionOrigin: rect,
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -176,7 +176,9 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                       children: [
                         Text(
                           _updatedRecipe!.name,
-                          style: Theme.of(context).textTheme.headlineSmall,
+                          // style: Theme.of(context).textTheme.headlineSmall,
+                          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 25
+                          )
                         ),
                         const SizedBox(height: 16),
                         _buildRichText(
@@ -188,7 +190,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                               child: TextField(
                                 controller: _coffeeController,
                                 decoration: const InputDecoration(
-                                    labelText: 'Cantidad de cafe (g)'),
+                                    labelStyle: TextStyle(fontWeight: FontWeight.w800)),
                                 keyboardType:
                                     const TextInputType.numberWithOptions(
                                         decimal: true),
@@ -209,7 +211,8 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                               child: TextField(
                                 controller: _waterController,
                                 decoration: const InputDecoration(
-                                    labelText: 'Cantidad de agua (ml)'),
+                                    labelText: 'Cantidad de agua (ml)',
+                                    labelStyle: TextStyle(fontWeight: FontWeight.w800)),
                                 keyboardType:
                                     const TextInputType.numberWithOptions(
                                         decimal: true),
@@ -247,7 +250,8 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                   RecipeSummary.fromRecipe(_updatedRecipe!)
-                                      .summary),
+                                      .summary,
+                                      style: const TextStyle(height: 2.5))
                             ),
                           ],
                         ),
@@ -311,7 +315,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
             ),
             TextSpan(
               text: linkText,
-              style: defaultTextStyle.copyWith(color: Colors.blue),
+              style: defaultTextStyle.copyWith(color: Color.fromARGB(255, 234, 75, 94)),
               recognizer: TapGestureRecognizer()
                 ..onTap = () async {
                   if (await canLaunchUrl(Uri.parse(linkUrl))) {

@@ -1,4 +1,5 @@
 import 'package:app_escoffee_main/models/recipe.dart';
+import 'package:flutter/material.dart';
 
 class RecipeSummary {
   final String id;

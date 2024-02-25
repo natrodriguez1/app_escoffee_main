@@ -80,7 +80,7 @@ class CoffeeTimerApp extends StatelessWidget {
           );
         },
         debugShowCheckedModeBanner: false,
-        title: 'EsCoffee',
+        title: 'EScoffee',
         theme: ThemeData(
           useMaterial3: true,
           colorScheme: const ColorScheme(
@@ -97,7 +97,7 @@ class CoffeeTimerApp extends StatelessWidget {
             onSurface: Color.fromARGB(255, 255, 255, 255),
           ),
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          fontFamily: kIsWeb ? 'Lato' : null,
+          fontFamily: 'Poppins',
         ),
       ),
     );
@@ -137,7 +137,7 @@ class _QuickActionsManagerState extends State<QuickActionsManager> {
         return AlertDialog(
           title: const Text("¡Gracias!"),
           content: const Text(
-              "¡Realmente aprecio su apoyo! ¡Te deseo muchas buenas cervezas! ☕️"),
+              "¡Realmente aprecio su apoyo! ¡Te deseo muchas buenos filtrados! ☕️"),
           actions: [
             TextButton(
               child: const Text("OK"),
