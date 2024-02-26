@@ -106,7 +106,7 @@ class RecipeProvider extends ChangeNotifier {
       'hario_v60': 'Hario V60',
       'aeropress': 'Aeropress',
       'chemex': 'Chemex',
-      'french_press': 'French Press',
+      'french_press': 'Prensa Francesa',
       'clever_dripper': 'Switch',
       //'kalita_wave': 'Kalita Wave',
       //'wilfa_svart': 'Wilfa Svart Pour Over',
