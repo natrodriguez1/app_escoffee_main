@@ -176,9 +176,8 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                       children: [
                         Text(
                           _updatedRecipe!.name,
-                          // style: Theme.of(context).textTheme.headlineSmall,
-                          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 25
-                          )
+                          //  style: Theme.of(context).textTheme.headlineMedium,
+                          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 25)
                         ),
                         const SizedBox(height: 16),
                         _buildRichText(
@@ -248,10 +247,12 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                  RecipeSummary.fromRecipe(_updatedRecipe!)
-                                      .summary,
-                                      style: const TextStyle(height: 2.5))
+                              // child: Text(
+                              //     RecipeSummary.fromRecipe(_updatedRecipe!)
+                              //         .summary,
+                              //         style: const TextStyle(height: 2.5))
+                              child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                children: RecipeSummary.fromRecipe(_updatedRecipe!).summary)
                             ),
                           ],
                         ),

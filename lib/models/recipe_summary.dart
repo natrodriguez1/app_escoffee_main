@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class RecipeSummary {
   final String id;
   final String name;
-  final String summary;
+  final List<Text> summary;
 
   RecipeSummary({
     required this.id,
@@ -13,7 +13,7 @@ class RecipeSummary {
   });
 
   factory RecipeSummary.fromRecipe(Recipe recipe) {
-    String summary = "";
+    List<Text> summary =<Text>[];
     int cumulativeTime = 0; // total seconds
 
     String replacePlaceholders(
@@ -57,7 +57,8 @@ class RecipeSummary {
       );
 
       // Add step description and time to summary
-      summary += '${formatTime(cumulativeTime)} $stepDescription\n';
+      summary.add(rowGenerator(cumulativeTime, stepDescription));
+      //summary += '${formatTime(cumulativeTime)} $stepDescription\n';
       cumulativeTime += step.time.inSeconds.toInt(); // add seconds
     }
 
@@ -69,8 +70,21 @@ class RecipeSummary {
   }
 }
 
+Text rowGenerator(int time, String description){
+  return Text.rich(
+      TextSpan(
+          children: [ 
+              TextSpan(text: '${formatTime(time)}  ', style: const TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.bold)),
+              TextSpan(text:description, style: const TextStyle(fontFamily: 'Poppins', height: 2)),
+          ]
+        ),
+        textAlign: TextAlign.start,
+  );
+}  
+
 String formatTime(int seconds) {
   final mins = seconds ~/ 60;
   final remainingSeconds = seconds % 60;
   return '$mins:${remainingSeconds.toString().padLeft(2, '0')}';
 }
+
