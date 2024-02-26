@@ -1,13 +1,13 @@
 {
   "images" : [
     {
-      "filename" : "App icon (1).png",
+      "filename" : "App icon 7.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "App icon (2).png",
+      "filename" : "App icon 6.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
@@ -19,13 +19,13 @@
       "size" : "29x29"
     },
     {
-      "filename" : "App icon (3).png",
+      "filename" : "App icon 5.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "App icon (4).png",
+      "filename" : "App icon 4.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
@@ -37,13 +37,13 @@
       "size" : "40x40"
     },
     {
-      "filename" : "App icon (5).png",
+      "filename" : "App icon 3.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "App icon (1) 1.png",
+      "filename" : "App icon.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
@@ -55,60 +55,61 @@
       "size" : "60x60"
     },
     {
-      "filename" : "Icon-App-20x20@1x.png",
+      "filename" : "App icon 9.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "20x20"
     },
     {
-      "filename" : "Icon-App-20x20@2x.png",
+      "filename" : "App icon 8.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "Icon-App-29x29@1x.png",
+      "filename" : "App icon 11.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
-      "filename" : "Icon-App-29x29@2x.png",
+      "filename" : "App icon 10.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "Icon-App-40x40@1x.png",
+      "filename" : "App icon 14.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
-      "filename" : "Icon-App-40x40@2x.png",
+      "filename" : "App icon 13.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "Icon-App-76x76@1x.png",
+      "filename" : "App icon 16.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
-      "filename" : "Icon-App-76x76@2x.png",
+      "filename" : "App icon 15.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "App icon 12.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "App icon.png",
+      "filename" : "App icon (1) 1.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
