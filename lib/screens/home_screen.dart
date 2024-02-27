@@ -13,6 +13,7 @@ import "package:universal_html/html.dart" as html;
 import '../purchase_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../utils/method_utils.dart';
+import 'package:flutter_device_type/flutter_device_type.dart';
 
 
 @RoutePage()
@@ -91,6 +92,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     highlightColor: const Color.fromARGB(255, 234, 75, 94),
                     borderRadius: BorderRadius.circular(17),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: 
                       [Padding(padding: const EdgeInsets.all(20),
                                 child: getImageByBrewingMethod(method.id, 100)), Text(method.name, style: const TextStyle(fontWeight: FontWeight.w900),)], 
@@ -103,11 +105,30 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
     return lista;
   }
+  bool isIpad() {
+      if(Device.get().isTablet){
+        return true;
+      }
+  return false;
+}
 
   @override
   Widget build(BuildContext context) {
     final recipeProvider = Provider.of<RecipeProvider>(context);
     final brewingMethods = Provider.of<List<BrewingMethod>>(context);
+
+    int crossAxisCount;
+    double mainAxisSpacing;
+    double crossAxisSpacing;
+
+    if(isIpad()){
+      
+      crossAxisCount = 3;
+      mainAxisSpacing = crossAxisSpacing = 20;
+    } else{
+      crossAxisCount = 2;
+      mainAxisSpacing = crossAxisSpacing = 10;
+    }
 
     return Scaffold(
       appBar: buildPlatformSpecificAppBar(),
@@ -125,14 +146,16 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               Padding(padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
                 child: InkWell(
                   onTap: () => _launchURL('https://escoffee.com/shop/'),
+                  highlightColor: const Color.fromARGB(255, 234, 75, 94),
+                  borderRadius: BorderRadius.circular(60),
                   child: Image.asset("assets/visuals/banner.png", fit: BoxFit.cover)
                 )
               ),
-              Expanded(child: GridView(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10,  crossAxisSpacing: 10),
+              Expanded(child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxisCount, mainAxisSpacing: mainAxisSpacing,  crossAxisSpacing: crossAxisSpacing),
                                 padding:  const EdgeInsets.all(15),
                                 children: menuItem(brewingMethods))),
               Padding(
-                padding: const EdgeInsets.only(bottom: 35),
+                padding: const EdgeInsets.only(bottom: 30),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 255, 255, 255), // Cambia el color a tu preferencia
