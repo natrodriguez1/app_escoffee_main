@@ -188,6 +188,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                               child: TextField(
                                 controller: _coffeeController,
                                 decoration: const InputDecoration(
+                                    labelText: 'Cantidad de café (g)',
                                     labelStyle: TextStyle(fontWeight: FontWeight.w800)),
                                 keyboardType:
                                     const TextInputType.numberWithOptions(
