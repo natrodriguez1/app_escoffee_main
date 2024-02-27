@@ -14,6 +14,8 @@ import '../purchase_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../utils/method_utils.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
 
 
 @RoutePage()
@@ -143,14 +145,27 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
           return Column(
             children:[
-              Padding(padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
-                child: InkWell(
-                  onTap: () => _launchURL('https://escoffee.com/shop/'),
-                  highlightColor: const Color.fromARGB(255, 234, 75, 94),
-                  borderRadius: BorderRadius.circular(60),
-                  child: Image.asset("assets/visuals/banner.png", fit: BoxFit.cover)
+              Padding(padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+              child: CarouselSlider(
+                  options: CarouselOptions(height: 220.0,
+                            autoPlay: true,
+                            enlargeCenterPage: true,
+                            enableInfiniteScroll: true),
+                  items: [["assets/visuals/banner.png", 'https://escoffee.com/shop/'],["assets/visuals/banner2.png", "https://escoffee.com/shop/70-maquina-de-espresso?order=product.position.asc"],["assets/visuals/banner3.png", 'https://escoffee.com/shop/121-blends-de-origenes']].map((i) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return  InkWell(
+                        onTap: () => _launchURL(i[1]),
+                        highlightColor: const Color.fromARGB(255, 234, 75, 94),
+                        borderRadius: BorderRadius.circular(60),
+                        child: Image.asset(i[0], fit: BoxFit.fitWidth)
+                      );
+                      },
+                    );
+                  }).toList(),
                 )
               ),
+
               Expanded(child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxisCount, mainAxisSpacing: mainAxisSpacing,  crossAxisSpacing: crossAxisSpacing),
                                 padding:  const EdgeInsets.all(15),
                                 children: menuItem(brewingMethods))),
