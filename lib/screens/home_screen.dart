@@ -124,7 +124,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     double crossAxisSpacing;
 
     if(isIpad()){
-      
       crossAxisCount = 3;
       mainAxisSpacing = crossAxisSpacing = 20;
     } else{
