@@ -169,18 +169,19 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               Expanded(child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxisCount, mainAxisSpacing: mainAxisSpacing,  crossAxisSpacing: crossAxisSpacing),
                                 padding:  const EdgeInsets.all(15),
                                 children: menuItem(brewingMethods))),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 30),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 255, 255, 255), // Cambia el color a tu preferencia
-                  ),
-                  child: const Text('Educare: tips para preparar tu café'),
-                  onPressed: () {
-                    context.router.push(const CoffeeTipsRoute());
-                  },
-                ),
-              ),]
+              // Padding(
+              //   padding: const EdgeInsets.only(bottom: 30),
+              //   child: ElevatedButton(
+              //     style: ElevatedButton.styleFrom(
+              //       backgroundColor: const Color.fromARGB(255, 255, 255, 255), // Cambia el color a tu preferencia
+              //     ),
+              //     child: const Text('Educare: tips para preparar tu café'),
+              //     onPressed: () {
+              //       context.router.push(const CoffeeTipsRoute());
+              //     },
+              //   ),
+              // )
+              ]
           );
         },
       ),
