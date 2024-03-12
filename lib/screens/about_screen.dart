@@ -70,11 +70,11 @@ class AboutScreen extends StatelessWidget {
                     child: Text(
                       kIsWeb
                           ? '''
-Política de Privacidad de EsCoffee (Versión Web)
+Política de Privacidad de EScoffee (Versión Web)
 
 1. INTRODUCCIÓN
 
-EsCoffee respeta la privacidad de sus usuarios y se compromete a protegerla en todos los aspectos. Esta política explicará cómo Coffee Timer utiliza los datos personales que recopilamos de usted cuando utiliza nuestra aplicación web.
+EScoffee respeta la privacidad de sus usuarios y se compromete a protegerla en todos los aspectos. Esta política explicará cómo nuestra app utiliza los datos personales que recopilamos de usted cuando utiliza nuestra aplicación web.
 
 2. RECOPILACIÓN Y USO DE DATOS
 
@@ -94,7 +94,7 @@ El script de seguimiento agrega la siguiente información estadística:
 
 3. GALLETAS
 
-EsCoffee utiliza cookies para recopilar datos anónimos para mejorar la experiencia del usuario y con fines analíticos.
+EScoffee utiliza cookies para recopilar datos anónimos para mejorar la experiencia del usuario y con fines analíticos.
 
 4. SEGURIDAD
 
@@ -121,19 +121,19 @@ Si desea presentar una queja o si cree que EsCoffee no ha abordado su inquietud 
 Todas las marcas comerciales, marcas de servicio, nombres comerciales, imágenes comerciales, nombres de productos y logotipos que aparecen en la aplicación son propiedad de sus respectivos dueños.
 '''
                           : '''
-Política de privacidad para EsCoffee
+Política de privacidad para EScoffee
 
 1. INTRODUCCIÓN
 
-EsCoffee respeta la privacidad de sus usuarios y se compromete a protegerla en todos los aspectos. Esta política explicará cómo EsCoffee utiliza los datos personales que recopilamos de usted cuando utiliza nuestra aplicación.
+EScoffee respeta la privacidad de sus usuarios y se compromete a protegerla en todos los aspectos. Esta política explicará cómo nuestra app utiliza los datos personales que recopilamos de usted cuando utiliza nuestra aplicación.
 
 2. RECOPILACIÓN Y USO DE DATOS
 
-EsCoffee no recopila ningún dato personal. No procesamos ninguna información de identificación personal ni recopilamos datos indirectamente de otras fuentes. Como no recopilamos ningún dato personal, no tenemos datos para compartir, vender o utilizar de ninguna manera.
+EScoffee no recopila ningún dato personal. No procesamos ninguna información de identificación personal ni recopilamos datos indirectamente de otras fuentes. Como no recopilamos ningún dato personal, no tenemos datos para compartir, vender o utilizar de ninguna manera.
 
-3. GALLETAS
+3. COOKIES
 
-EsCoffee no utiliza cookies.
+EScoffee no utiliza cookies.
 
 4. SEGURIDAD
 
@@ -141,7 +141,7 @@ Valoramos su confianza al proporcionarnos su información personal, por lo que n
 
 5. POLÍTICAS DE PRIVACIDAD DE OTROS SITIOS WEB
 
-La aplicación EsCoffee contiene enlaces a otros sitios web. Nuestra política de privacidad se aplica sólo a nuestra aplicación, por lo que si hace clic en un enlace a otro sitio web o servicio, debe leer su política de privacidad.
+La aplicación EScoffee contiene enlaces a otros sitios web. Nuestra política de privacidad se aplica sólo a nuestra aplicación, por lo que si hace clic en un enlace a otro sitio web o servicio, debe leer su política de privacidad.
 
 6. CAMBIOS A NUESTRA POLÍTICA DE PRIVACIDAD
 
@@ -149,11 +149,11 @@ Podemos actualizar nuestra Política de Privacidad de vez en cuando. Por lo tant
 
 7. CONTÁCTENOS
 
-Para cualquier pregunta o aclaración sobre la Política de Privacidad, por favor contáctenos en support@EsCoffee
+Para cualquier pregunta o aclaración sobre la Política de Privacidad, por favor contáctenos en info@escoffee.com
 
 8. CÓMO CONTACTAR A LA AUTORIDAD CORRESPONDIENTE
 
-Si desea presentar una queja o si cree que EsCoffee no ha abordado su inquietud de manera satisfactoria, puede comunicarse con su autoridad local de protección de datos.
+Si desea presentar una queja o si cree que EScoffee no ha abordado su inquietud de manera satisfactoria, puede comunicarse con su autoridad local de protección de datos.
 
 9. MARCAS COMERCIALES
 
