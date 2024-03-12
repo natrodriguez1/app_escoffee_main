@@ -197,9 +197,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
   PreferredSizeWidget buildPlatformSpecificAppBar() {
     if (Theme.of(context).platform == TargetPlatform.iOS) {
-      return CupertinoNavigationBar(
+      return PreferredSize(
+        preferredSize: const Size.fromHeight(100.0),
+        child: Container(
+          height: 110,
+          child: CupertinoNavigationBar(
         leading: Padding(padding: const EdgeInsets.fromLTRB(16, 6, 7, 12),
-                      child: Image.asset('assets/logoapp.png', height: 300)),
+                      child: Image.asset('assets/logoapp.png', fit: BoxFit.fitWidth)),
         backgroundColor: const Color.fromARGB(255, 97, 8, 25),
         trailing: IconButton(
           icon: const Icon(Icons.info),
@@ -207,6 +211,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             context.router.push(const AboutRoute());
           },
         ),
+      )
+        )
       );
     } else {
       return AppBar(
