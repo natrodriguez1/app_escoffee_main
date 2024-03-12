@@ -33,9 +33,9 @@ class OnboardingScreen extends StatelessWidget {
       ),
     ),
     PageViewModel(
-      title: "Activar timbre de sonido",
+      title: "Activa tu timbre",
       body:
-          "Reciba notificaciones sobre los próximos pasos de preparación. Útil cuando usas recetas con pasos de preparación largos y no quieres mirar tu teléfono todo el tiempo.",
+          "Recibe notificaciones sobre los próximos pasos de preparación. Útil cuando usas recetas con pasos de preparación largos y no quieres mirar tu teléfono todo el tiempo.",
       image: _buildImage('intro3', isGif: true), // Replace with your image path
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
@@ -79,7 +79,7 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromARGB(255, 133, 14, 36),
       body: SafeArea(
         child: IntroductionScreen(
           pages: listPagesViewModel,
@@ -92,15 +92,17 @@ class OnboardingScreen extends StatelessWidget {
             context.router.replaceNamed('/');
           },
           showSkipButton: true,
-          skip: const Text('Saltar'),
-          next: const Text('Siguiente'),
-          done: const Text('Empezar a preparar',
+          skip: const Text('Saltar',
+              style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white)),
+          next: const Text('Siguiente',
+              style: TextStyle(fontWeight: FontWeight.w800, color: Colors.white)),
+          done: const Text('Empezar!',
               style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: Color.fromRGBO(182, 9, 19, 1))),
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white)),
           dotsDecorator: const DotsDecorator(
             size: Size.square(10.0),
-            activeColor: Color.fromRGBO(182, 9, 19, 1),
+            activeColor: Color.fromRGBO(255, 255, 255, 1),
             activeSize: Size.square(20.0),
             activeShape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(25.0))),

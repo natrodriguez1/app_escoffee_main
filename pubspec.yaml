@@ -1,7 +1,7 @@
 name: app_escoffee_main
-description: Brew delicious coffee at home with Escoffee.Coffee
+description: Filtra tu café más delicioso con EScoffee
 publish_to: 'none'
-version: 0.1.0
+version: 1.8.0
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
