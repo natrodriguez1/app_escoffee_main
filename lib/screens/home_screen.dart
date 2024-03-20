@@ -200,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       return PreferredSize(
         preferredSize: const Size.fromHeight(100.0),
         child: Container(
-          height: 110,
+          height: 105,
           child: CupertinoNavigationBar(
         leading: Padding(padding: const EdgeInsets.fromLTRB(16, 6, 7, 12),
                       child: Image.asset('assets/logoapp.png', fit: BoxFit.fitWidth)),
@@ -216,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     } else {
       return AppBar(
-        title: Image.asset('assets/logoapp.png'),
+        title: Image.asset('assets/logoapp.png', height: 25),
         actions: [
           IconButton(
             icon: const Icon(Icons.info),
