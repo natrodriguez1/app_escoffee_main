@@ -15,7 +15,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../utils/method_utils.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
+import 'dart:ui';
+import 'dart:io';
 
 
 @RoutePage()
@@ -108,11 +109,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return lista;
   }
   bool isIpad() {
-      if(Device.get().isTablet){
-        return true;
-      }
-  return false;
-}
+    final data = MediaQueryData.fromWindow(WidgetsBinding.instance.window);
+    return data.size.shortestSide < 600 ? false :true;
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -122,13 +122,16 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     int crossAxisCount;
     double mainAxisSpacing;
     double crossAxisSpacing;
+    double carrouselHeight;
 
     if(isIpad()){
       crossAxisCount = 3;
       mainAxisSpacing = crossAxisSpacing = 20;
+      carrouselHeight = 450;
     } else{
       crossAxisCount = 2;
       mainAxisSpacing = crossAxisSpacing = 10;
+      carrouselHeight = 220;
     }
 
     return Scaffold(
@@ -146,7 +149,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             children:[
               Padding(padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
               child: CarouselSlider(
-                  options: CarouselOptions(height: 220.0,
+                  options: CarouselOptions(height: carrouselHeight,
                             autoPlay: true,
                             enlargeCenterPage: true,
                             enableInfiniteScroll: true),
@@ -200,11 +203,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       return PreferredSize(
         preferredSize: const Size.fromHeight(100.0),
         child: Container(
-          height: 105,
+          height: 100,
           child: CupertinoNavigationBar(
         leading: Padding(padding: const EdgeInsets.fromLTRB(16, 6, 7, 12),
-                      child: Image.asset('assets/logoapp.png', fit: BoxFit.fitWidth)),
-        backgroundColor: const Color.fromARGB(255, 97, 8, 25),
+                      child: Image.asset('assets/logoapp.png', height: 25)),
+        backgroundColor: const Color.fromARGB(255, 97, 8, 20),
         trailing: IconButton(
           icon: const Icon(Icons.info),
           onPressed: () {
