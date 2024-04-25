@@ -47,12 +47,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   auto_route_generator: ^7.2.0
   build_runner: ^2.2.0
-  flutter_launcher_icons: "^0.13.1"
-
-flutter_launcher_icons:
-  android: "coffee_timer"
-  image_path: "assets/icono_android.png"
-
+  
 flutter_native_splash:
   color: "#ffffff"
   image: assets/splash.png
