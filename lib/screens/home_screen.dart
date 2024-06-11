@@ -97,8 +97,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: 
-                      [Padding(padding: const EdgeInsets.all(20),
-                                child: getImageByBrewingMethod(method.id, 100)), Text(method.name, style: const TextStyle(fontWeight: FontWeight.w900),)], 
+                      [Padding(padding: const EdgeInsets.all(10),
+                                child: getImageByBrewingMethod(method.id, imageSize)), Text(method.name, style: const TextStyle(fontWeight: FontWeight.w900),)], 
                       )
                             
                 )
@@ -110,10 +110,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
   bool isIpad() {
     final data = MediaQueryData.fromWindow(WidgetsBinding.instance.window);
+    carrouselHeight = data.size.longestSide / 2.5;
+    imageSize = data.size.longestSide/7;
     return data.size.shortestSide < 600 ? false :true;
-
   }
-
+  late double carrouselHeight;
+  late double imageSize;
   @override
   Widget build(BuildContext context) {
     final recipeProvider = Provider.of<RecipeProvider>(context);
@@ -122,12 +124,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     int crossAxisCount;
     double mainAxisSpacing;
     double crossAxisSpacing;
-    double carrouselHeight;
 
     if(isIpad()){
       crossAxisCount = 3;
-      mainAxisSpacing = crossAxisSpacing = 20;
-      carrouselHeight = 450;
+      mainAxisSpacing = crossAxisSpacing = 450;
     } else{
       crossAxisCount = 2;
       mainAxisSpacing = crossAxisSpacing = 10;
