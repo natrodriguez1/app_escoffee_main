@@ -7,7 +7,7 @@
         </intent>
     </queries>
     <application
-        android:label="app_escoffee_main"
+        android:label="EScoffee"
         android:name="${applicationName}"
         android:icon="@mipmap/coffee_timer">
         <activity
