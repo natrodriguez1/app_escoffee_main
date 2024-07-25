@@ -151,7 +151,7 @@ class _BrewingProcessScreenState extends State<BrewingProcessScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Proceso de elaboración')),
+      appBar: AppBar(title: const Text('Elaboración')),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

@@ -19,3 +19,11 @@ Para abrir simuladores:
 - $ open -a Simulator
 - ó $ flutter run
 
+Pasos para añadir un nuevo método:
+- añadir .json con recetas en assets/data
+- añadir imagen del vector en assets/visuals
+- añadir referencia en assets/data/brewing_methods.json
+- añadir referencia de la imagen del vector y .json en pubspec.yaml
+- añadir referencia en lib/providers/recipe_provider.dart
+- añadir icono en lib/utils/icon_utils.dart //TODO
+- añadir referencia en método lib/utils/method_utils.dart

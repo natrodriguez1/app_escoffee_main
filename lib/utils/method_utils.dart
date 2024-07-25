@@ -8,6 +8,7 @@ Image getImageByBrewingMethod(String? brewingMethodId, double height) {
     "french_press": Image.asset('assets/visuals/prensa.png',height: height, fit: BoxFit.contain,),
     "hario_v60": Image.asset('assets/visuals/hario.png',height: height, fit: BoxFit.contain,),
     "origami": Image.asset('assets/visuals/origami.png',height: height, fit: BoxFit.contain,),
+    "syphon": Image.asset('assets/visuals/syphon.png',height: height*1.25, fit: BoxFit.contain,)
   };
 
   return images[brewingMethodId] ?? Image.asset("assets/logoapp.png");

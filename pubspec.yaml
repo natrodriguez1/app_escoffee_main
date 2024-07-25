@@ -29,7 +29,7 @@ dependencies:
   flutter_native_splash: ^2.3.1
   quick_actions: ^1.0.5
   introduction_screen: ^3.1.11
-  coffeico: ^0.0.1
+  coffeico: ^0.2.0
   in_app_purchase: ^3.1.11
   flutter_device_type: ^0.4.0
   carousel_slider: ^4.2.1
@@ -86,6 +86,7 @@ flutter:
     - assets/data/recipes_kalita.json
     - assets/data/recipes_wilfa.json
     - assets/data/recipes_origami.json
+    - assets/data/recipes_syphon.json
     - assets/data/coffee_facts.json
     - assets/CONTRIBUTORS.md
     - assets/audio/next.mp3
@@ -102,3 +103,4 @@ flutter:
     - assets/visuals/banner.png
     - assets/visuals/banner2.png
     - assets/visuals/banner3.png
+    - assets/visuals/syphon.png

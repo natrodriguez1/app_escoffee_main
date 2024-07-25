@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
     if (state == AppLifecycleState.resumed && kIsWeb) {
-      html.document.title = 'Escoffee App';
+      html.document.title = 'Escoffee';
     }
   }
   List<Container> menuItem (List<BrewingMethod> methods){
@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       lista.add(Container(
               decoration: BoxDecoration(
                     color: const Color.fromRGBO(157, 17, 43, 1),
-                    borderRadius: BorderRadius.circular(17.0),
+                    borderRadius: BorderRadius.circular(20.0),
                   ),
               child: Material(
                 color: Colors.transparent,
@@ -93,12 +93,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                           brewingMethodId: method.id));
                     },
                     highlightColor: const Color.fromARGB(255, 234, 75, 94),
-                    borderRadius: BorderRadius.circular(17),
+                    borderRadius: BorderRadius.circular(20),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: 
                       [Padding(padding: const EdgeInsets.all(10),
-                                child: getImageByBrewingMethod(method.id, imageSize)), Text(method.name, style: const TextStyle(fontWeight: FontWeight.w900),)], 
+                                child: getImageByBrewingMethod(method.id, imageSize)), Text(method.name, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.w900, height: 1))], 
                       )
                             
                 )
@@ -109,10 +109,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return lista;
   }
   bool isIpad() {
-    final data = MediaQueryData.fromWindow(WidgetsBinding.instance.window);
-    carrouselHeight = data.size.longestSide / 2.5;
-    imageSize = data.size.longestSide/7;
-    return data.size.shortestSide < 600 ? false :true;
+    final data = MediaQuery.of(context);
+    carrouselHeight = data.size.height / 2.5;
+    imageSize = data.size.height/9;
+    return data.size.width < 600 ? false :true;
   }
   late double carrouselHeight;
   late double imageSize;
@@ -147,29 +147,42 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
           return Column(
             children:[
-              Padding(padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
+              Padding(padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
               child: CarouselSlider(
-                  options: CarouselOptions(height: carrouselHeight,
+                  options: CarouselOptions(height: carrouselHeight - 5,
                             autoPlay: true,
                             enlargeCenterPage: true,
                             enableInfiniteScroll: true),
                   items: [["assets/visuals/banner.png", 'https://escoffee.com/shop/'],["assets/visuals/banner2.png", "https://escoffee.com/shop/70-maquina-de-espresso?order=product.position.asc"],["assets/visuals/banner3.png", 'https://escoffee.com/shop/121-blends-de-origenes']].map((i) {
-                    return Builder(
-                      builder: (BuildContext context) {
-                        return  InkWell(
-                        onTap: () => _launchURL(i[1]),
-                        highlightColor: const Color.fromARGB(255, 234, 75, 94),
-                        borderRadius: BorderRadius.circular(60),
+                    // return Builder(
+                    //   builder: (BuildContext context) {
+                    //     return  Center(
+                    //       child: InkWell(
+                    //     onTap: () => _launchURL(i[1]),
+                    //     highlightColor: const Color.fromARGB(255, 234, 75, 94),
+                    //     borderRadius: BorderRadius.circular(10),
+                    //     child: Image.asset(i[0], fit: BoxFit.fitWidth)
+                    //     )
+                    //   );
+                    //   },
+                    // );
+                    return InkWell(
+                      onTap: () => _launchURL(i[1]),
+                      borderRadius: BorderRadius.circular(30),
+                      highlightColor: const Color.fromARGB(255, 234, 75, 94),
+                      child: Ink(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        decoration: const BoxDecoration(color: Colors.transparent
+                        ),
                         child: Image.asset(i[0], fit: BoxFit.fitWidth)
+                        ),
                       );
-                      },
-                    );
                   }).toList(),
                 )
               ),
 
               Expanded(child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxisCount, mainAxisSpacing: mainAxisSpacing,  crossAxisSpacing: crossAxisSpacing),
-                                padding:  const EdgeInsets.all(15),
+                                padding:  const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                                 children: menuItem(brewingMethods))),
               // Padding(
               //   padding: const EdgeInsets.only(bottom: 30),
@@ -202,11 +215,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     if (Theme.of(context).platform == TargetPlatform.iOS) {
       return PreferredSize(
         preferredSize: const Size.fromHeight(100.0),
-        child: Container(
+        child: SizedBox(
           height: 100,
           child: CupertinoNavigationBar(
-        leading: Padding(padding: const EdgeInsets.fromLTRB(16, 6, 7, 12),
-                      child: Image.asset('assets/logoapp.png', height: 25)),
+        leading: Padding(padding: const EdgeInsets.fromLTRB(16, 6, 7, 17),
+                      child: Image.asset('assets/logoapp.png')),
         backgroundColor: const Color.fromARGB(255, 97, 8, 20),
         trailing: IconButton(
           icon: const Icon(Icons.info),
@@ -219,7 +232,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       );
     } else {
       return AppBar(
-        title: Image.asset('assets/logoapp.png', height: 25),
+        title: Image.asset('assets/logoapp.png', scale: 2),
         actions: [
           IconButton(
             icon: const Icon(Icons.info),

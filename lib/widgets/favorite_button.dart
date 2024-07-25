@@ -20,7 +20,7 @@ class FavoriteButton extends StatelessWidget {
         return IconButton(
           icon: Icon(
             isFavorite ? Icons.favorite : Icons.favorite_border,
-            color: isFavorite ? Colors.brown : null,
+            color: isFavorite ? const Color.fromARGB(255, 234, 75, 94) : null,
           ),
           onPressed: () {
             onToggleFavorite(!isFavorite);

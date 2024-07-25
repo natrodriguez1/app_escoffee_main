@@ -20,6 +20,11 @@
       "recipe_file": "recipes_frenchpress.json"
     },
     {
+      "id": "syphon",
+      "name": "Sifón",
+      "recipe_file": "recipes_syphon.json"
+    },
+    {
       "id": "clever_dripper",
       "name": "Switch dripper",
       "recipe_file": "recipes_clever.json"

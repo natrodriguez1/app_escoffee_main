@@ -94,7 +94,7 @@ class _RecipeListScreenState extends State<RecipeListScreen>
           controller: _tabController,
           tabs: const [
             Tab(text: 'Todas las recetas'),
-            Tab(text: 'Recetas favoritas'),
+            Tab(text: 'Favoritas'),
           ],
         ),
       ),

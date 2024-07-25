@@ -7,9 +7,9 @@ import 'package:auto_route/auto_route.dart';
 class OnboardingScreen extends StatelessWidget {
   final List<PageViewModel> listPagesViewModel = [
     PageViewModel(
-      title: "Bienvenido Coffee Lover",
+      title: "Bienvenido Coffee Lover!",
       body:
-          "Desliza para ver algunos consejos útiles sobre cómo preparar café con esta aplicación.",
+          "Desliza para ver algunos consejos útiles sobre cómo preparar café con esta app.",
       image: _buildImage('intro1'), // Replace with your image path
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
@@ -22,7 +22,7 @@ class OnboardingScreen extends StatelessWidget {
     PageViewModel(
       title: "Prepara todo el café que necesites",
       body:
-          "Simplemente ajuste los valores en la página de recetas. Todos los pasos de preparación se actualizarán en consecuencia.",
+          "Ajusta los valores en la página de recetas y obtén todas las recetas personalizadas a tu preferencia.",
       image: _buildImage('intro2', isGif: true), // Replace with your image path
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
@@ -35,7 +35,7 @@ class OnboardingScreen extends StatelessWidget {
     PageViewModel(
       title: "Activa tu timbre",
       body:
-          "Recibe notificaciones sobre los próximos pasos de preparación. Útil cuando usas recetas con pasos de preparación largos y no quieres mirar tu teléfono todo el tiempo.",
+          "Recibe notificaciones sobre los próximos pasos de tu preparación. Útil cuando usas recetas con pasos de preparación largos y no quieres mirar tu teléfono todo el tiempo.",
       image: _buildImage('intro3', isGif: true), // Replace with your image path
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
@@ -45,19 +45,19 @@ class OnboardingScreen extends StatelessWidget {
         bodyTextStyle: TextStyle(fontSize: 20, color: Colors.white),
       ),
     ),
-    PageViewModel(
-      title: "Compartir recetas con amigos",
-      body:
-          "Envíales el enlace de la receta. Podrán abrirlo y preparar café incluso si no tienen la aplicación instalada.",
-      image: _buildImage('intro4'), // Replace with your image path
-      decoration: const PageDecoration(
-        titleTextStyle: TextStyle(
-            color: Color.fromARGB(255, 234, 75, 94),
-            fontSize: 28,
-            fontWeight: FontWeight.bold),
-        bodyTextStyle: TextStyle(fontSize: 20, color: Colors.white),
-      ),
-    ),
+    // PageViewModel(
+    //   title: "Comparte recetas con amigos",
+    //   body:
+    //       "Envíales el enlace de la receta. Podrán abrirlo y preparar café incluso si no tienen la aplicación instalada.",
+    //   image: _buildImage('intro4'), // Replace with your image path
+    //   decoration: const PageDecoration(
+    //     titleTextStyle: TextStyle(
+    //         color: Color.fromARGB(255, 234, 75, 94),
+    //         fontSize: 28,
+    //         fontWeight: FontWeight.bold),
+    //     bodyTextStyle: TextStyle(fontSize: 20, color: Colors.white),
+    //   ),
+    // ),
     // Add as many pages as you require
   ];
 

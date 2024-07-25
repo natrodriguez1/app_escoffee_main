@@ -65,6 +65,9 @@ class RecipeProvider extends ChangeNotifier {
       case 'wilfa_svart':
         jsonFileName = 'recipes_wilfa.json';
         break;*/
+      case 'syphon':
+        jsonFileName = 'recipes_syphon.json';
+        break;
       case 'origami':
         jsonFileName = 'recipes_origami.json';
         break;
@@ -110,7 +113,8 @@ class RecipeProvider extends ChangeNotifier {
       'clever_dripper': 'Switch',
       //'kalita_wave': 'Kalita Wave',
       //'wilfa_svart': 'Wilfa Svart Pour Over',
-      'origami': 'Origami Dripper'
+      'origami': 'Origami Dripper',
+      'syphon': 'Sifón'
     };
 
     if (!brewingMethods.containsKey(brewingMethodId)) {
