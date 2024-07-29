@@ -96,6 +96,7 @@ class _RecipeListScreenState extends State<RecipeListScreen>
             Tab(text: 'Todas las recetas'),
             Tab(text: 'Favoritas'),
           ],
+          dividerColor: const Color.fromARGB(255, 97, 8, 25),
         ),
       ),
       body: TabBarView(

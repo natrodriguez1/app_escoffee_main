@@ -11,7 +11,7 @@ Icon getIconByBrewingMethod(String? brewingMethodId) {
     "hario_v60": Icon(Coffeico.hario_v60),
     //"kalita_wave": Icon(Coffeico.kalita_wave),
     "origami": Icon(Coffeico.origami),
-    "syphon": Icon(Coffeico.origami), //TODO
+    "syphon": Icon(Coffeico.bean), //TODO
     //"wilfa_svart": Icon(Coffeico.wilfa_svart),
   };
 
