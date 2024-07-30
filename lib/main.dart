@@ -13,7 +13,8 @@ import './app_router.dart';
 import './app_router.gr.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import './models/recipe.dart';
-import './purchase_manager.dart'; // Import PurchaseManager
+import 'package:flutter/services.dart';
+// import './purchase_manager.dart'; // Import PurchaseManager
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +39,7 @@ void main() async {
     runApp(CoffeeTimerApp(
       brewingMethods: brewingMethods,
       appRouter: appRouter,
-      initialRoute: isFirstLaunch ? '/firstlaunch' : '/',
+      initialRoute: isFirstLaunch ? '/firstlaunch' : '/firstlaunch',
     ));
 
     if (isFirstLaunch) {
@@ -85,7 +86,7 @@ class CoffeeTimerApp extends StatelessWidget {
           useMaterial3: true,
           colorScheme: const ColorScheme(
             brightness: Brightness.light,
-            primary: Color.fromARGB(255, 234, 75, 94),
+            primary: Color(0xFFD75A72),
             onPrimary: Color.fromARGB(255, 255, 255, 255),
             secondary: Color.fromARGB(255, 255, 255, 255),
             onSecondary: Color.fromRGBO(157, 17, 43, 1),
@@ -222,6 +223,9 @@ class _QuickActionsManagerState extends State<QuickActionsManager> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp]
+    );
     return widget.child;
   }
 }

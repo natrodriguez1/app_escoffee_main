@@ -100,7 +100,8 @@ flutter:
     - assets/visuals/prensa.png
     - assets/visuals/switch.png
     - assets/visuals/origami.png
-    - assets/visuals/banner.png
-    - assets/visuals/banner2.png
-    - assets/visuals/banner3.png
+    - assets/visuals/banners/banner.png
+    - assets/visuals/banners/banner2.png
+    - assets/visuals/banners/banner3.png
     - assets/visuals/syphon.png
+    - assets/visuals/banners/banner4.png

@@ -316,7 +316,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
             ),
             TextSpan(
               text: linkText,
-              style: defaultTextStyle.copyWith(color: Color.fromARGB(255, 234, 75, 94)),
+              style: defaultTextStyle.copyWith(color:const Color(0xFFD75A72)),
               recognizer: TapGestureRecognizer()
                 ..onTap = () async {
                   if (await canLaunchUrl(Uri.parse(linkUrl))) {

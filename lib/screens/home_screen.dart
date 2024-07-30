@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                       context.router.push(RecipeListRoute(
                           brewingMethodId: method.id));
                     },
-                    highlightColor: const Color.fromARGB(255, 234, 75, 94),
+                    highlightColor: const Color(0xFFD75A72),
                     borderRadius: BorderRadius.circular(20),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -110,12 +110,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
   bool isIpad() {
     final data = MediaQuery.of(context);
-    carrouselHeight = data.size.height / 2.5;
-    imageSize = data.size.height/9;
+    carrouselHeight = data.size.height;
+    imageSize = data.size.height;
     return data.size.width < 600 ? false :true;
   }
   late double carrouselHeight;
   late double imageSize;
+  late double barHeight;
   @override
   Widget build(BuildContext context) {
     final recipeProvider = Provider.of<RecipeProvider>(context);
@@ -127,11 +128,16 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
     if(isIpad()){
       crossAxisCount = 3;
-      mainAxisSpacing = crossAxisSpacing = 450;
+      mainAxisSpacing = crossAxisSpacing = 18;
+      imageSize = imageSize/8;
+      carrouselHeight = carrouselHeight/2.5;
+      barHeight = 90;
     } else{
       crossAxisCount = 2;
       mainAxisSpacing = crossAxisSpacing = 10;
-      carrouselHeight = 220;
+      imageSize = imageSize/9;
+      carrouselHeight = 240;
+      barHeight = 112;
     }
 
     return Scaffold(
@@ -153,13 +159,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                             autoPlay: true,
                             enlargeCenterPage: true,
                             enableInfiniteScroll: true),
-                  items: [["assets/visuals/banner.png", 'https://escoffee.com/shop/'],["assets/visuals/banner2.png", "https://escoffee.com/shop/70-maquina-de-espresso?order=product.position.asc"],["assets/visuals/banner3.png", 'https://escoffee.com/shop/121-blends-de-origenes']].map((i) {
+                  items: [["assets/visuals/banners/banner.png", 'https://escoffee.com/shop/'],["assets/visuals/banners/banner2.png", "https://escoffee.com/shop/70-maquina-de-espresso?order=product.position.asc"],["assets/visuals/banners/banner3.png", 'https://escoffee.com/shop/121-blends-de-origenes'],["assets/visuals/banners/banner4.png", 'https://escoffee.com/shop/125-nanolot']].map((i) {
                     // return Builder(
                     //   builder: (BuildContext context) {
                     //     return  Center(
                     //       child: InkWell(
                     //     onTap: () => _launchURL(i[1]),
-                    //     highlightColor: const Color.fromARGB(255, 234, 75, 94),
+                    //     highlightColor: const Color(0xFFD75A72),
                     //     borderRadius: BorderRadius.circular(10),
                     //     child: Image.asset(i[0], fit: BoxFit.fitWidth)
                     //     )
@@ -169,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     return InkWell(
                       onTap: () => _launchURL(i[1]),
                       borderRadius: BorderRadius.circular(30),
-                      highlightColor: const Color.fromARGB(255, 234, 75, 94),
+                      highlightColor: const Color(0xFFD75A72),
                       child: Ink(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         decoration: const BoxDecoration(color: Colors.transparent
@@ -216,7 +222,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       return PreferredSize(
         preferredSize: const Size.fromHeight(100.0),
         child: SizedBox(
-          height: 100,
+          height: barHeight,
           child: CupertinoNavigationBar(
         leading: Padding(padding: const EdgeInsets.fromLTRB(16, 6, 7, 17),
                       child: Image.asset('assets/logoapp.png')),
