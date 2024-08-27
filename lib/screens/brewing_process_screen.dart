@@ -124,7 +124,7 @@ class _BrewingProcessScreenState extends State<BrewingProcessScreen> {
             context,
             MaterialPageRoute(
               builder: (context) => FinishScreen(
-                  brewingMethodName: widget.recipe.brewingMethodName),
+                  brewingMethodName: widget.recipe.brewingMethodName, brewingMethodId:  widget.recipe.brewingMethodId),
             ),
           );
         }

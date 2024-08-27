@@ -16,8 +16,6 @@ import '../utils/method_utils.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'dart:ui';
-import 'dart:io';
-
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {

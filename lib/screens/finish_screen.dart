@@ -11,11 +11,13 @@ import 'package:url_launcher/url_launcher.dart';
 import 'dart:io';
 import 'package:wakelock_plus/wakelock_plus.dart';
 import 'package:flutter/foundation.dart';
+import '../utils/method_utils.dart';
 
 class FinishScreen extends StatefulWidget {
   final String brewingMethodName;
+  final String brewingMethodId;
 
-  const FinishScreen({super.key, required this.brewingMethodName});
+  const FinishScreen({super.key, required this.brewingMethodName, required this.brewingMethodId});
 
   @override
   State<FinishScreen> createState() => _FinishScreenState();
@@ -93,37 +95,40 @@ class _FinishScreenState extends State<FinishScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Finish')),
+      appBar: AppBar(title: const Text('Final')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              '¡Gracias por usar EsCoffee! Disfrute de su ${widget.brewingMethodName}!',
+            Padding(padding: const EdgeInsets.fromLTRB(15, 30, 15, 15),
+        child: getImageByBrewingMethod(widget.brewingMethodId, 200)),
+            Padding(padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 40),
+            child: Text(
+              '¡Gracias por preparar tu café con EScoffee, disfruta de tu ${widget.brewingMethodName}!',
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 24),
-            ),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            )),
             const SizedBox(height: 20),
             FutureBuilder<String>(
               future: coffeeFact,
               builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
                 if (snapshot.hasData) {
                   return Card(
-                    margin: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(25),
                     child: Padding(
-                      padding: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                       child: RichText(
                         textAlign: TextAlign.center,
                         text: TextSpan(
                           style: DefaultTextStyle.of(context).style,
                           children: <TextSpan>[
                             const TextSpan(
-                                text: 'Hecho del café: ',
+                                text: 'Dato curioso de café: ',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20)),
+                                    fontWeight: FontWeight.bold, fontSize: 18)),
                             TextSpan(
                                 text: '${snapshot.data}',
-                                style: const TextStyle(fontSize: 20)),
+                                style: const TextStyle(fontSize: 18)),
                           ],
                         ),
                       ),
@@ -136,39 +141,13 @@ class _FinishScreenState extends State<FinishScreen> {
                 }
               },
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 25),
             ElevatedButton(
               onPressed: () {
                 context.router.push(const HomeRoute());
               },
               child: const Text('Inicio'),
             ),
-            const SizedBox(height: 20),
-            if (kIsWeb || !Platform.isIOS) // Conditional statement
-              ElevatedButton.icon(
-                onPressed: () => _launchURL('https://escoffee.com/shop/'),
-                icon: const Icon(Icons.web),
-                label: const Text('Página Web'),
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white),
-                  // Otras propiedades de estilo pueden ir aquí...
-                ),
-              ),
-            if (!kIsWeb && Platform.isIOS) // New condition specifically for iOS
-              ElevatedButton.icon(
-                onPressed: () {
-                  context.router
-                      .push(const DonationRoute()); // Your routing logic
-                },
-                icon: const Icon(Icons.local_cafe),
-                label: const Text('Apoya la aplicación'),
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.white),
-                  // Otras propiedades de estilo pueden ir aquí...
-                ),
-              ),
           ],
         ),
       ),
