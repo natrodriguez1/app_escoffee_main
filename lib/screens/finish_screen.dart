@@ -102,11 +102,11 @@ class _FinishScreenState extends State<FinishScreen> {
           children: [
             Padding(padding: const EdgeInsets.fromLTRB(15, 30, 15, 15),
         child: getImageByBrewingMethod(widget.brewingMethodId, 200)),
-            Padding(padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 40),
+            Padding(padding: const EdgeInsets.only(top: 10, right: 40, left: 40),
             child: Text(
               '¡Gracias por preparar tu café con EScoffee, disfruta de tu ${widget.brewingMethodName}!',
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             )),
             const SizedBox(height: 20),
             FutureBuilder<String>(

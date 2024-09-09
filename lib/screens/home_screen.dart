@@ -13,10 +13,7 @@ import "package:universal_html/html.dart" as html;
 import '../purchase_manager.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../utils/method_utils.dart';
-import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'dart:ui';
-
 @RoutePage()
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
