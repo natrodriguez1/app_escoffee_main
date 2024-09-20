@@ -1,7 +1,7 @@
 name: app_escoffee_main
 description: Filtra tu café más delicioso con EScoffee
 publish_to: 'none'
-version: 1.8.0
+version: 1.8.1
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
@@ -32,9 +32,10 @@ dependencies:
   coffeico: ^0.2.0
   in_app_purchase: ^3.1.11
   flutter_device_type: ^0.4.0
-  carousel_slider: ^4.2.1
+  carousel_slider: ^5.0.0
 
 dependency_overrides:
+  win32: ^5.5.3
   flutter_keyboard_visibility:
     git:
       url: https://github.com/MisterJimson/flutter_keyboard_visibility.git
